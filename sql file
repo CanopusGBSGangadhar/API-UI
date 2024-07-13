@@ -1,0 +1,79 @@
+CREATE TABLE regions (
+    region_id INT PRIMARY KEY,
+    region_name VARCHAR(255),
+    region_key VARCHAR(255),
+    created_dt TIMESTAMP,
+    modified_dt TIMESTAMP,
+    created_by INT,
+    modified_by INT,
+    is_active BOOLEAN
+);
+INSERT INTO regions (region_id, region_name, region_key, created_dt, modified_dt, created_by, modified_by, is_active) 
+  VALUES(1, 'West Mumbai', 'WMQ', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (2, 'Europe', 'EUR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (3, 'Africa', 'AFR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (4, 'SEA1', 'INA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (5, 'SAARC', 'ASA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (6, 'SAARC', 'PAK', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (7, 'MENA', 'MEA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (8, 'CSA', 'CSA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (9, 'SEA2', 'THA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (10, 'SAARC', 'BAN', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (11, 'SEA2', 'KOR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (12, 'SEA2', 'SEA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (13, 'Turkey', 'TUR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (14, 'North America', 'CNA', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (15, 'ROW', 'ROW', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (16, 'Africa', 'WAFR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (17, 'Europe', 'EEUR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (18, 'Europe', 'WUR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (19, 'Africa', 'EAFR', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (20, 'Africa', 'SADC', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (21, 'North', 'NEQ', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (22, 'South', 'SEQ', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (23, 'East', 'EEQ', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (24, 'West Pune', 'WPQ', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1), (25, 'Middle East region', 'MEN', '2023-07-10 12:00:00', '2023-07-10 12:00:00', 0, 0, 1);
+
+Roles: 
+
+INSERT INTO roles (role_id, role_name, role_code, group_code, description, created_dt, modified_dt, created_by, modified_by, is_active) VALUES
+(1, 'Cost Estimation Engineer', NULL, 'QUOT_EDIT', 'Prepares cost estimation', '41:03.1', '41:03.1', 1, 1, 1),
+(2, 'Cost Estimation Approver', NULL, 'QUOT_APPROVER', 'Approves cost estimation', '41:03.1', '41:03.1', 1, 1, 1),
+(3, 'Cost Estimation Reviewer', NULL, 'QUOT_REVIWER', 'Reviews cost estimation', '41:03.1', '41:03.1', 1, 1, 1),
+(4, 'F2F Engineer', NULL, 'F2F_EDIT', 'To change the Turbine instruments and condensing instruments costs on quarterly basis', '41:03.1', '41:03.1', 1, 1, 1),
+(5, 'F2F Reviewer', NULL, 'F2F_REVIWER', 'To review the Turbine instruments and condensing instruments costs on quarterly basis', '41:03.1', '41:03.1', 1, 1, 1),
+(6, 'F2F Approver', NULL, 'F2F_APPROVER', 'To approve the Turbine instruments and condensing instruments costs on quarterly basis', '41:03.1', '41:03.1', 1, 1, 1),
+(7, 'DBO Electrical Engineer', NULL, 'DBO_ELE_EDIT', 'To change the supply chain costs of electrical items', '41:03.1', '41:03.1', 1, 1, 1),
+(8, 'DBO Electrical Reviewer', NULL, 'DBO_ELE_REVIWER', 'To review the supply chain costs of electrical items', '41:03.1', '41:03.1', 1, 1, 1),
+(9, 'DBO Electrical Approver', NULL, 'DBO_ELE_APPROVER', 'To approve the supply chain costs of electrical items', '41:03.1', '41:03.1', 1, 1, 1),
+(10, 'DBO Mechanical Engineer', NULL, 'DBO_MECH_EDIT', 'To change the supply chain costs of mechanical items', '41:03.1', '41:03.1', 1, 1, 1),
+(11, 'DBO Mechanical Reviewer', NULL, 'DBO_MECH_REVIWER', 'To review the supply chain costs of mechanical items', '41:03.2', '41:03.2', 1, 1, 1),
+(12, 'DBO Mechanical Approver', NULL, 'DBO_MECH_APPROVER', 'To approve the supply chain costs of mechanical items', '41:03.2', '41:03.2', 1, 1, 1),
+(13, 'Erection & Commission Engineer', NULL, 'EC_EDIT', 'To change the erection and commission costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(14, 'Erection & Commission Reviewer', NULL, 'EC_REVIWER', 'To review the erection and commission costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(15, 'Erection & Commission Approver', NULL, 'EC_APPROVER', 'To approve the erection and commission costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(16, 'Transportation Engineer', NULL, 'TRANS_EDIT', 'To change the transportation costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(17, 'Transportation Reviewer', NULL, 'TRANS_REVIWER', 'To review the transportation costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(18, 'Transportation Approver', NULL, 'TRANS_APPROVER', 'To approve the transportation costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(19, 'Packaging & Forwarding Engineer', NULL, 'PKG_FW_EDIT', 'To change the packaging costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(20, 'Packaging & Forwarding Reviewer', NULL, 'PKG_FW_REVIWER', 'To review the packaging costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(21, 'Packaging & Forwarding Approver', NULL, 'PKG_FW_APPROVER', 'To approve the transportation on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(22, 'Admin', NULL, 'ADMIN', 'Configuration changes in ITO system', '41:03.2', '41:03.2', 1, 1, 1),
+(23, 'UBO Engineer', NULL, 'UBO_EDIT', 'To change the turbine material costs and sub contracting on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(24, 'UBO Reviewer', NULL, 'UBO_REVIWER', 'To review the turbine material costs and sub contracting on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(25, 'UBO Approver', NULL, 'UBO_APPROVER', 'To approve the turbine material costs and sub contracting on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(26, 'Finance Engineer', NULL, 'FINANCE_EDIT', 'To change the shop conversion costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(27, 'Finance Reviewer', NULL, 'FINANCE_REVIWER', 'To review the shop conversion costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(28, 'Finance Approver', NULL, 'FINANCE_APPROVER', 'To revew the shop conversion costs on quarterly basis', '41:03.2', '41:03.2', 1, 1, 1),
+(29, 'Projects Executive', NULL, 'PROJECT_EDIT', 'To tranfer budget cost to SAP', '41:03.3', '41:03.3', 1, 1, 1),
+(30, 'Projects Admin', NULL, 'PROJECT_APPROVER', 'To approve tranfer budget cost to SAP', '41:03.3', '41:03.3', 1, 1, 1),
+(31, 'Sub-contracting & PPE Engineer', NULL, 'SUB_CONTR_EDIT', 'To change the shop conversion and sub-contracting costs on quarterly basis', '41:03.3', '41:03.3', 1, 1, 1),
+(32, 'Sub-contracting & PPE Reviewer', NULL, 'SUB_CONTR_REVIWER', 'To review the shop conversion and sub-contracting costs on quarterly basis', '41:03.3', '41:03.3', 1, 1, 1),
+(33, 'Sub-contracting & PPE Approver', NULL, 'SUB_CONTR_APPROVER', 'To revew the shop conversion and sub-contracting costs on quarterly basis', '41:03.3', '41:03.3', 1, 1, 1);
+
+
+Departments:
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_cd VARCHAR(255),
+    dept_name VARCHAR(255),
+    created_dt DATE,
+    modified_dt DATE,
+    created_by INT,
+    modified_by INT,
+    is_active BOOLEAN
+);
+INSERT INTO departments (dept_id, dept_cd, dept_name, created_dt, modified_dt, created_by, modified_by, is_active) VALUES
+(1, 'MRKT_SL', 'Mktg_Sales', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(2, 'SL', 'Sales', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(3, 'MRKT', 'Marketing', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(4, 'PRO', 'Proposals', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(5, 'PROJ_SALE', 'Project_Sales', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(6, 'ENG', 'Engineering', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(7, 'INF', 'Infotech', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(8, 'UB', 'UBO', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(9, 'MECH', 'DBO Mechanical', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(10, 'ELE', 'DBO Electrical', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(11, 'MNFR', 'Manufacturing', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(12, 'FIN', 'Finance', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(13, 'PROJ', 'Projects', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(14, 'TR', 'Transportation', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(15, 'SH', 'Shipping', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true),
+(16, 'SUB_CONTR', 'Sub-contracting & PPE', '2021-12-13 15:41:03.020', '2021-12-13 15:41:03.020', 0, 0, true);
